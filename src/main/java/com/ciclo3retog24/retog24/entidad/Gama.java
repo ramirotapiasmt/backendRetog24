@@ -10,19 +10,17 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name="room")
-public class Room {
+@Entity(name="gamas")
+public class Gama {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id_Gama;
     private String name;
-    private String hotel;
-    private int stars;
     private String description;
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    @JsonIgnoreProperties("rooms")
-    private Category category;
+
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "gamas")
+    @JsonIgnoreProperties("gamas")
+    private Car car;
 
 }
 
