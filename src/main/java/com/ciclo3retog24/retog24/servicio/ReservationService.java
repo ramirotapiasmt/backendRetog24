@@ -26,8 +26,8 @@ public class ReservationService {
 
             }
             public Reservation updateReservation(Reservation reservationUpd){
-                Reservation reservationOld = getReservation(reservationUpd.getId_Reservation());
-                reservationOld.getId_Reservation();
+                Reservation reservationOld = getReservation(reservationUpd.getIdReservation());
+                reservationOld.getIdReservation();
                 return repository.save(reservationOld);
             }
 

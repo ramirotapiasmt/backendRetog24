@@ -15,10 +15,10 @@ import java.util.List;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_Car;
+    private long idCar;
     private String name;
     private String brand;
-    private int year;
+    private int year_;
     private String description;
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "car")
     @JoinColumn(name="gama")

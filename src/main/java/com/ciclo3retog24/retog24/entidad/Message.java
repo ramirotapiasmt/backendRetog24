@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id_Message;
+    public long idMessage;
     private String messageText;
 
     @ManyToOne

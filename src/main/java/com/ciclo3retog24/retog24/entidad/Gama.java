@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Gama {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_Gama;
+    private long idGama;
     private String name;
     private String description;
 

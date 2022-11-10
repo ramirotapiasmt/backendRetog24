@@ -22,7 +22,7 @@ public class GamaService {
         return repository.findById(id).orElse(null); }
 
     public Gama updateGama(Gama gamaUpd) {
-        Gama gamaOld = getGama(gamaUpd.getId_Gama());
+        Gama gamaOld = getGama(gamaUpd.getIdGama());
         gamaOld.setName(gamaUpd.getName());
         gamaOld.setDescription(gamaUpd.getDescription());
         gamaOld.setCar(gamaUpd.getCar());

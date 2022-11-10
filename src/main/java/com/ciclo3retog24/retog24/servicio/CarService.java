@@ -35,7 +35,7 @@ public class CarService {
     }
 
     public Car updateCar(Car carUpd) {
-        Car carOld = getCar(carUpd.getId_Car());
+        Car carOld = getCar(carUpd.getIdCar());
         carOld.setName(carUpd.getName());
         carOld.setDescription(carUpd.getDescription());
         return repository.save(carOld);
